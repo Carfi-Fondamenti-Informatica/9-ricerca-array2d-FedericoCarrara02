@@ -5,41 +5,17 @@ using namespace std;
 
 void riempimento (char array[], char c, char end_input) {
     for (int col = 0; col < 20; ++col) {
-        cin >> c;
-        if(c == end_input) {
-            int lack = 20 - col;
-            for (int i = 0; i < lack; i++) {
-                while (col < 20) {
-                    array[col] = 0;
-                    col++;
-                }
-
-            }
-        }
-        else {
-            array[col] = c;
-        }
+        array[col] = 0;
     }
+    cin >> array;
 }
 
 void riempimento2d (char array[10][20], char c, char end_input) {
     for (int row = 0; row < 10; ++row) {
         for (int col = 0; col < 20; ++col) {
-            cin >> c;
-            if(c == end_input) {
-                int lack = 20 - col;
-                for (int i = 0; i < lack; i++) {
-                    while (col < 20) {
-                        array[row][col] = 0;
-                        col++;
-                    }
-
-                }
+            array[row][col] = 0;
             }
-            else {
-                array[row][col] = c;
-            }
-        }
+        cin >> array[row];
     }
 }
 void stampa(char array[]) {
@@ -79,4 +55,5 @@ int main() {
 
     return 0;
 }
+
 
